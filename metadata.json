@@ -1,0 +1,6 @@
+{
+  "name": "Prime Matka",
+  "description": "भारत का सबसे भरोसेमंद Satta Matka Application – Download Prime Matka APK",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

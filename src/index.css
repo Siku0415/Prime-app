@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    background-color: #0c0f16;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom pulsing glow animation */
+@keyframes gold-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.7);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(10%); }
+  100% { transform: translateX(-100%); }
+}
+
+.gold-glow-btn {
+  animation: gold-glow 2s infinite;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
