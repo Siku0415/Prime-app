@@ -571,7 +571,7 @@ export default function App() {
           className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs py-2.5 px-4 font-black rounded-lg flex items-center gap-1.5 shadow-md shadow-amber-500/20 active:scale-95 transition-all text-center cursor-pointer"
         >
           <Download size={14} className="animate-bounce" />
-          <span>{lang === 'hi' ? 'डाउनलोड' : 'Download Now'}</span>
+          <span>Download Now</span>
         </button>
       </div>
 
@@ -626,7 +626,7 @@ export default function App() {
               className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-lg font-black text-sm shadow-md shadow-amber-500/10 hover:shadow-amber-500/25 active:scale-95 transition-all cursor-pointer"
             >
               <Download size={14} />
-              <span>{t.downloadBtn}</span>
+              <span>Download Prime Matka App</span>
             </button>
 
             {/* Mobile menu trigger */}
@@ -656,16 +656,7 @@ export default function App() {
             <a href="#rates-section" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-500 transition-all">{t.navRates}</a>
             <a href="#guide-section" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-500 transition-all">{t.navGuide}</a>
             
-            <button 
-              onClick={() => {
-                setMobileMenuOpen(false);
-                handleDownloadClick();
-              }}
-              className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black py-3 px-4 rounded-lg flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <Download size={16} />
-              <span>{t.downloadBtn}</span>
-            </button>
+            {/* DRAWER DOWNLOAD BUTTON REMOVED */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -703,6 +694,23 @@ export default function App() {
               {t.tagline}
             </p>
 
+            {/* BIG ATTRACTIVE HERO DOWNLOAD BUTTON */}
+            <div className="w-full flex justify-center lg:justify-start">
+              <button
+                onClick={handleDownloadClick}
+                id="btn-hero-download"
+                className="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-black text-base sm:text-lg py-4 px-8 rounded-2xl flex items-center justify-center gap-3 shadow-xl shadow-amber-500/25 active:scale-95 hover:scale-[1.01] duration-150 transition-all cursor-pointer"
+              >
+                <div className="bg-white/10 p-1.5 rounded-lg flex-shrink-0">
+                  <Smartphone className="text-white h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
+                </div>
+                <div className="text-left font-sans">
+                  <span className="block font-black leading-tight">Download Prime Matka App</span>
+                  <span className="block text-[10px] sm:text-xs text-white/80 font-medium mt-0.5">Safe & Secure .apk File (8.4 MB)</span>
+                </div>
+              </button>
+            </div>
+
             {/* Interactive Social Numbers Panel */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-sm my-1">
               <div className="bg-white border border-slate-200/80 p-3 rounded-xl rounded-b-none border-b-2 border-b-amber-500 text-center shadow-xs">
@@ -719,23 +727,9 @@ export default function App() {
               </div>
             </div>
 
-            {/* GIANT DOWNLOAD BUTTON */}
-            <div className="flex flex-col items-center lg:items-start gap-4 w-full">
-              <button
-                onClick={handleDownloadClick}
-                id="btn-hero-download"
-                className="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-black text-base sm:text-lg py-4 px-8 rounded-2xl flex items-center justify-center gap-3 shadow-xl shadow-amber-500/25 active:scale-95 hover:scale-[1.01] duration-150 transition-all cursor-pointer"
-              >
-                <div className="bg-white/10 p-1.5 rounded-lg">
-                  <Smartphone className="text-white h-5 w-5 sm:h-6 sm:w-6 animate-bounce" />
-                </div>
-                <div className="text-left font-sans">
-                  <span className="block font-black leading-tight">{t.downloadBtn}</span>
-                  <span className="block text-[10px] sm:text-xs text-white/80 font-medium">{t.subDownload}</span>
-                </div>
-              </button>
-
-              <p className="text-xs text-amber-700 font-black flex items-center gap-1.5">
+            {/* GIANT DOWNLOAD BUTTON - REMOVED TO ONLY KEEP STICKY BOTTOM AND MAIN HEADER */}
+            <div className="flex flex-col items-center lg:items-start gap-2 w-full">
+              <p className="text-sm text-slate-700 font-black flex items-center gap-1.5 bg-amber-500/10 px-4 py-2.5 rounded-xl border border-amber-500/15">
                 <span className="inline-block text-emerald-600 font-black">✔</span>
                 {t.guaranteedAuto}
               </p>
@@ -1220,15 +1214,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Play trigger button */}
-                  <button 
-                    onClick={handleDownloadClick}
-                    className="w-full mt-4 text-[11px] font-black flex items-center justify-center gap-1 text-amber-600 hover:text-white bg-amber-50 border border-amber-200 group-hover:bg-amber-600 group-hover:text-white py-2.5 rounded-xl transition-all cursor-pointer"
-                  >
-                    <span>{t.playToWin}</span>
-                    <ChevronRight size={12} />
-                  </button>
-
                 </div>
               );
             })}
@@ -1376,16 +1361,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-slate-100">
-                <button
-                  onClick={handleDownloadClick}
-                  id="btn-calc-download"
-                  className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-sm sm:text-base py-3 px-6 rounded-2xl flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all text-center cursor-pointer"
-                >
-                  <Download size={16} />
-                  <span>{t.playToWin}</span>
-                </button>
-              </div>
+              {/* CALCULATOR DOWNLOAD BUTTON REMOVED */}
 
             </div>
 
@@ -1439,16 +1415,7 @@ export default function App() {
 
           </div>
 
-          <div className="mt-10 text-center">
-            <button
-              onClick={handleDownloadClick}
-              id="btn-guide-download"
-              className="px-8 py-3.5 bg-white hover:bg-slate-50 border border-amber-500/35 rounded-2xl font-black text-amber-700 hover:text-amber-800 transition-all text-xs sm:text-sm flex mx-auto items-center gap-2 active:scale-95 shadow-xs cursor-pointer"
-            >
-              <Download size={14} className="text-amber-600" />
-              <span>{lang === 'hi' ? 'ऐप डाउनलोड करने के लिए यहाँ क्लिक करें' : 'Click Here to Download Application'}</span>
-            </button>
-          </div>
+          {/* GUIDE DOWNLOAD BUTTON REMOVED */}
 
         </div>
       </section>
